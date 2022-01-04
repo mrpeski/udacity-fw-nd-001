@@ -1,0 +1,30 @@
+/* Components */
+
+.button {
+
+}
+.featured {
+    order: -1;
+}
+
+#content .card:first-child {
+    grid-column: 1 / 3;
+}
+.card img {
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 350px;
+}
+.avatar {
+
+}
+
+.related {
+    /*background-color: var(--gray);*/
+    border: 1px solid var(--gray);
+}
+.article {
+    max-width: 800px;
+    margin: 0 auto 4em;
+}

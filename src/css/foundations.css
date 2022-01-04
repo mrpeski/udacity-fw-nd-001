@@ -1,0 +1,26 @@
+/* Foundations */
+:root {
+    --primary: rgb(2%, 30%, 70%);
+    --secondary: rgb(4%, 100%, 10%);
+    --gray: rgb(50%, 50%, 50%);
+    --white: #fff;
+    --black: #000;
+
+    --base-size: 14px;
+    --level-one: 1em;
+    --level-two: 2em;
+    --level-three: 3em;
+    --leading: 1.5;
+    --font-family: "Open Sans", Roboto, sans-serif;
+}
+
+html, body {
+    /*width: 100%;*/
+    font-family: var(--font-family);
+    font-size: var(--base-size);
+    background-color: var(--white);
+    line-height: var(--leading);
+}
+p, h1, h2, h3 {
+    font-family: inherit;
+}

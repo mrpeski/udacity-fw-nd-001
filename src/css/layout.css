@@ -1,0 +1,30 @@
+/* Layout */
+.three-col-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+
+    grid-template-areas: "hd hd hd"
+    "body body body"
+    "footer footer footer";
+    padding: 32px;
+}
+
+.main-header{
+    grid-area: hd;
+}
+.content {
+    grid-area: body;
+}
+.footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+}
+.nav {
+    display: flex;
+    justify-content: center;
+}
