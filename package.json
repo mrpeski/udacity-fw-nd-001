@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "build:dev": "webpack --mode=development",
+    "build:prod": "webpack --mode=production --node-env=production",
+    "build": "webpack --mode=production --node-env=production",
+    "watch": "webpack --watch",
+    "serve": "webpack serve",
+    "purgecss": "purgecss --css source/dist/site.css --content output_dev/* --output /Users/Olayinka/PhpstormProjects/coventi-wp/wp-content/themes/coventi/style.css",
+    "deploy": "firebase deploy",
+    "bs:start": "browser-sync start -c bs-config.js"
+  },
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "@webpack-cli/generators": "^2.4.1",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.4.4",
+    "purgecss": "^4.0.3",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.4.4",
+    "webpack": "^5.62.1",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.4.0",
+    "workbox-webpack-plugin": "^6.3.0"
+  }
+}
