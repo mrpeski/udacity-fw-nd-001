@@ -5,6 +5,9 @@
 * {
     box-sizing: border-box;
 }
+figure {
+    margin: 0
+}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/foundations.css ***!
   \***************************************************************************/
@@ -38,31 +41,70 @@ p, h1, h2, h3 {
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/typography.css ***!
   \**************************************************************************/
 /* Typography */
-
+.title {
+    font-size: 1.3em;
+}
 /*!************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/patterns.css ***!
   \************************************************************************/
 /* Patterns */
 .nav .link {
-    padding: 16px
+    padding: 16px;
+    text-decoration: none;
+    color: #333;
+    font-size: 2em;
+}
+body{
+    border: 12px solid #3a5e22;
+    border-width: 0 12px;
+    margin: 0;
+}
+body::before{
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background-color: #3a5e22;
+}
+
+body::after{
+    content: "";
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 12px;
+    background-color: #3a5e22;
 }
 /*!**********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/layout.css ***!
   \**********************************************************************/
 /* Layout */
 .three-col-grid {
-    display: grid;
+    display: block;
+    padding: 16px;
+}
 
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    grid-column-gap: 32px;
-    grid-row-gap: 32px;
+@media screen and (min-width: 600px){
+    .three-col-grid {
+        display: grid;
 
-    grid-template-areas: "hd hd hd"
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        grid-column-gap: 32px;
+        grid-row-gap: 32px;
+
+        grid-template-areas: "hd hd hd"
     "body body body"
     "footer footer footer";
-    padding: 32px;
+        padding: 32px;
+    }
 }
+
 
 .main-header{
     grid-area: hd;
@@ -87,18 +129,23 @@ p, h1, h2, h3 {
 .button {
 
 }
-.featured {
-    order: -1;
-}
 
 #content .card:first-child {
     grid-column: 1 / 3;
+}
+.card {
+    padding: 20px;
+    background-color: #ccc;
 }
 .card img, .post-image {
     max-width: 100%;
     object-fit: cover;
     width: 100%;
     height: 350px;
+}
+.featured {
+    order: -1;
+    background-color: #7b9d3a;
 }
 
 .avatar {
@@ -112,6 +159,72 @@ p, h1, h2, h3 {
 .article {
     max-width: 800px;
     margin: 0 auto 4em;
+}
+
+.button, button {
+    padding: 10px 20px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    transition: opacity 0.3s;
+    box-sizing: border-box;
+}
+button:hover, .button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+.outline {
+    background-color: transparent;
+    border: 1px solid #55c715;
+    color: #55c715;
+}
+.primary {
+    background-color: #55c715;
+    color: #ffffff;
+}
+
+.d-flex-h{
+    display: flex;
+}
+.d-flex-v {
+    display: flex;
+    flex-direction: column;
+}
+.color-box {
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #333;
+    margin-right: 20px;
+}
+.green {
+    background-color: #55c715;
+
+}
+.green-800 {
+    background-color: #3a5e22;
+
+}
+.green-100 {
+    background-color: #7b9d3a;
+}
+
+.author {
+    flex-wrap: wrap;
+    padding: 20px;
+    background: #cecece;
+    margin: 60px 0
+}
+.author .left {
+    align-items: center;
+    padding: 10px;
+}
+.author .right {
+    flex: 1
+}
+.author .avatar {
+    width: 100px
 }
 /*!********************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/site.css ***!
