@@ -89,7 +89,7 @@ body::after{
     padding: 16px;
 }
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 901px){
     .three-col-grid {
         display: grid;
 
@@ -103,6 +103,10 @@ body::after{
     "footer footer footer";
         padding: 32px;
     }
+}
+
+@media screen and (min-width: 600px) and (max-width:900px){
+
 }
 
 
